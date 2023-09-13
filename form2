@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css    ">
+    <style>
+        body{
+            background-color: gray;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #main{
+            height: 500px;
+            width: 900px;
+            /* border: 1px solid; */
+            box-shadow: 2px white;
+            background-color: white;
+            display:flex;
+
+        }
+        #parent2{
+            padding-top: 40px;
+        }
+        #parent21 {
+            display:flex;
+        }
+        #head1{
+            margin-left: 50px;
+        }
+        #parent21 i{
+            margin-top: 0px;
+            margin-left: 150px;
+        }
+        .input{
+            display:block;
+            padding: 10px 50px;
+            border: none;
+            outline: none;
+            background-color:rgb(242, 242, 242);
+            
+        }
+        .label{
+            margin-left: 50px;
+        }
+        .child{
+            background-color:rgb(242, 242, 242);
+            height: 40px;
+            width: 320px;
+            border: 1px solid;
+            border-radius: 3px;
+            display: flex;
+            margin: 10px;
+            margin-left:50px;
+        }
+        .child i{
+            padding: 10px;
+        }
+        #butt{
+            background-color: rgb(3, 3, 32);
+            color: white;
+            margin-top: 10px;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <form action="https://sheetdb.io/api/v1/z09jqa18ud1jv" method="post" id="sheetdb-form">
+        <div id="main">
+            <div class="parent" id="parent1">
+                <img height="500px"  width="450px" src="./Propacity Aranya Assignment/Untitled-1 2.jpg" alt="">
+            </div>
+            <div class="parent" id="parent2">
+                <div id="parent21" class="1">
+                    <h1 id="head1">Book Site Tour</h1>
+                   <i class="fa fa-times-circle" aria-hidden="true"></i>
+                </div>
+
+                <div  id="parent 22">
+                    <label for="" class="label" id="leb1">Name</label>
+                    <div class="child">
+                        <input type="text" name="date[Name]" class="input" id="input1" required>
+                        <i class="fa fa-user" aria-hidden="true"></i>
+
+                    </div>
+                    <label for="" class="label" id="leb2">Email</label>
+                    <div class="child">
+                        <input type="text" name="date[Email]" pattern="^[a-zA-Z0-9]+@gmail\.com" class="input" id="input2">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+
+                    </div>
+                    <label for="" class="label" id="leb3">Mobile</label>
+                   <div class="child">
+                     <input type="text" class="input" name="data[Mobile]" id="input3">
+                     <i class="fa fa-phone" aria-hidden="true"></i>
+
+                    </div>
+                </div>
+            <button type="submit" id="butt" style="height: 40px; width: 322px; margin-left: 50px;">Book Now</button>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        var form = document.getElementById('sheetdb-form');
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      fetch(form.action, {
+          method : "POST",
+          body: new FormData(document.getElementById("sheetdb-form")),
+      }).then(
+          response => response.json()
+      ).then((html) => {
+        window.open('./form.html', '_blank');
+
+      });
+    });
+    </script>
+    
+</body>
+</html>
