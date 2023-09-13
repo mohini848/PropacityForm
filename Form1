@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: gray;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+        #main{
+            height: 550px;
+            width: 900px;
+            /* border: 1px solid; */
+            padding: 10px 50px;
+            background-color: white;
+            box-shadow: 2px white;
+        } 
+        #parent1{
+            display: inline-flex;
+            width: 900px;
+        }
+        .child{
+            margin-left: 10px ;
+        }
+        #child3{
+            margin-left: 650px;
+            margin-top: 10px;
+            font-size: 15px;
+            color: orangered;
+        }
+        .child1{
+            height: 350px;
+            width: 500px;
+            /* border: 1px solid; */
+        }
+        #parent2{
+            display: flex;
+        }
+        
+       
+        #ch2 h1{
+            margin-left: 80px;
+            margin-top: 100px;
+        }
+        #ch2 button{
+            background-color: rgb(1, 1, 31);
+            padding:5px 10px;
+        }
+        .ch2ch {
+            margin: 10px 80px;
+        
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        #parent3 p{
+            display: inline;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        #para1{
+            font-size: 20px;
+            font-weight:bolder
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="parent" id="parent1">
+            <div class="child" id="child1">
+                <img src="./Propacity Aranya Assignment/icon1.jpg" height="50px" width="50px">
+            </div>
+            <div class="child" id="child2" >
+                <p id="p1"><span style="font-size: 20px; font-weight: bold ;">Piramal</span><br>aranya</p>
+                
+            </div>
+            <div class="child" id="child3">+91-8197883993</div>
+        </div>
+        <div class="parent" id="parent2">
+           <div class="child1" id="ch1"> <img src="./Propacity Aranya Assignment/Untitled-1 2.jpg" height="350" width="500px" alt=""></div>
+           <div class="child1" id="ch2">
+            <h1 class="ch2ch">
+                Thanks for <br> registering!
+            </h1>
+            <p class="ch2ch">Our experts will get in touch <br>with you shortly</p>
+            <button class="ch2ch" type="button"><a href="./form2.html">Back To Homepage</a></button>
+           </div>
+        </div>
+        <div class="parent" id="parent3">
+            <p id="para1">Disclamer</p>
+            <br>
+            <br>
+            <p>This is not the official website to developer,it belongs to the authorised channel patner for information and marketing purpose only.All rights for logo & imgaes 
+                <br> are reserved by the developer
+            </p>
+            <br>
+            <br>
+            <p>Digital Medial planned by <p style="font-weight: bold;">Propacity</p></p>
+        </div>
+       
+    </div>
+    
+</body>
+</html>
